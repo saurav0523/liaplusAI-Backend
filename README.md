@@ -73,9 +73,7 @@ This project is built using the following technologies and libraries, with their
 
 The project is live at: [https://liaplusai-backend-3.onrender.com](https://liaplusai-backend-3.onrender.com). You can test the API endpoints using Postman or the Swagger documentation linked below.
 
-## Swagger Documentation
 
-API documentation is available via Swagger: [OpenAPI Spec](https://editor.swagger.io/?url=https://raw.githubusercontent.com/saurav0523/liaplusAI-Backend/main/openapi.yaml) (upload the `openapi.yaml` file to Swagger Editor for interactive UI).
 
 ## Prerequisites
 
