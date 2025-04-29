@@ -9,9 +9,6 @@ Email verification for user signup (mandatory).
 Secure access to different functionalities based on user roles.
 Backend API built with Express.js and MongoDB.
 
-
-
-
 Folder Structure
 The project follows a modular structure for better organization and scalability:
 project/
@@ -34,9 +31,6 @@ project/
 ├── tsconfig.json                 # TypeScript configuration
 ├── package.json                  # Project metadata and dependencies
 └── README.md                     # Project documentation (this file)
-
-
-
 
 Technologies Used
 This project is built using the following technologies and libraries, with their respective versions as of the project setup:
@@ -86,6 +80,7 @@ JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_email_app_password
 PORT=3000
+
 
 DATABASE_URL: Your MongoDB Atlas connection string. Replace blog_system with your database name if different.
 JWT_SECRET: A secure secret for JWT signing (e.g., mysecretkey123).
@@ -175,6 +170,7 @@ Admin only
 Testing with Postman
 
 Sign Up:
+
 Method: POST
 URL: http://localhost:3000/auth/signup
 Body (raw JSON):{
@@ -183,24 +179,33 @@ Body (raw JSON):{
   "password": "password123",
   "role": "user"
 }
+
+
 Response: 201 with {"message": "User created, please verify your email", "user": {...}}
 
+
 Verify Email:
+
 Method: GET
 URL: http://localhost:3000/auth/verify?token=<token> (token from email)
 Response: 200 with {"message": "Email verified successfully"}
 
+
 Log In:
+
 Method: POST
 URL: http://localhost:3000/auth/login
 Body (raw JSON):{
   "email": "john.doe@example.com",
   "password": "password123"
 }
+
+
 Response: 200 with {"token": "<jwt_token>", "user": {...}}
 
 
 Get Posts:
+
 Method: GET
 URL: http://localhost:3000/posts
 Headers: Authorization: Bearer <jwt_token>
@@ -208,6 +213,7 @@ Response: 200 with an array of posts (e.g., [] if no posts exist)
 
 
 Create a Post (Admin Only):
+
 Sign up and log in as an admin user ("role": "admin").
 Method: POST
 URL: http://localhost:3000/posts
@@ -216,20 +222,32 @@ Body (raw JSON):{
   "title": "First Post",
   "content": "This is the content of the first post."
 }
+
+
 Response: 201 with {"title": "First Post", "content": "...", ...}
 
+
 Delete a Post (Admin Only):
+
 Method: DELETE
 URL: http://localhost:3000/posts/<post_id>
 Headers: Authorization: Bearer <admin_jwt_token>
 Response: 200 with {"message": "Post deleted"}
 
+
+
 Scripts
 The package.json includes the following scripts:
+
 npm start: Runs the server using ts-node src/server.ts.npm start
+
+
 npm run build: Compiles TypeScript files to JavaScript in the dist directory.npm run build
 
+
+
 Troubleshooting
+
 "Access denied" (401): Ensure the Authorization header is set to Bearer <token> in Postman.
 "Email not verified" (403): Verify the user’s email using the verification link.
 "Admin access required" (403): Use a token from an admin user for restricted actions.
@@ -244,7 +262,20 @@ TypeScript Errors:
 Run npm install to ensure all dependencies are installed.
 Check tsconfig.json for correct configuration.
 
+
+
+Future Improvements
+
+Add a frontend using React to interact with the API.
+Implement pagination for the /posts endpoint.
+Add input validation using libraries like express-validator.
+Improve error handling with custom error middleware.
+
 Contact Information
 For any questions or support, please contact:
+
 Name: Saurav Gupta
 Email: gsaurav641@gmail.com
+
+
+
