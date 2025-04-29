@@ -174,8 +174,8 @@ Sign Up:
 Method: POST
 URL: http://localhost:3000/auth/signup
 Body (raw JSON):{
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "name": "Saurav Gupta",
+  "email": "sauravg@example.com",
   "password": "password123",
   "role": "user"
 }
@@ -196,7 +196,7 @@ Log In:
 Method: POST
 URL: http://localhost:3000/auth/login
 Body (raw JSON):{
-  "email": "john.doe@example.com",
+  "email": "sauravg@example.com",
   "password": "password123"
 }
 
