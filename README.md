@@ -239,12 +239,6 @@ npm run build
 - Run `npm install` to ensure all dependencies are installed.
 - Check `tsconfig.json` for correct configuration.
 
-## Future Improvements
-
-- Add a frontend using React to interact with the API.
-- Implement pagination for the `/posts` endpoint.
-- Add input validation using libraries like `express-validator`.
-- Improve error handling with custom error middleware.
 
 ## Contact Information
 
