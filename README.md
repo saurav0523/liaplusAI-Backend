@@ -9,6 +9,9 @@ Email verification for user signup (mandatory).
 Secure access to different functionalities based on user roles.
 Backend API built with Express.js and MongoDB.
 
+
+
+
 Folder Structure
 The project follows a modular structure for better organization and scalability:
 project/
@@ -31,6 +34,9 @@ project/
 ├── tsconfig.json                 # TypeScript configuration
 ├── package.json                  # Project metadata and dependencies
 └── README.md                     # Project documentation (this file)
+
+
+
 
 Technologies Used
 This project is built using the following technologies and libraries, with their respective versions as of the project setup:
