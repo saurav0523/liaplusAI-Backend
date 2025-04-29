@@ -51,6 +51,20 @@ ts-node: v10.9.1 (For running TypeScript files directly)
 @types/jsonwebtoken: v9.0.2 (TypeScript type definitions for jsonwebtoken)
 @types/nodemailer: v6.4.8 (TypeScript type definitions for nodemailer)
 
+
+
+Summary of Endpoints Tested
+Endpoint	     Method	      Description	         Authorization Required	         Role Restriction
+/auth/signup	  POST	      Register a new user	        No	                            No
+/auth/verify	  GET	        Verify user email	          No	                            No
+/auth/login	    POST	      Log in and get JWT token	  No	                            No
+/posts	        GET	        View all posts	            Yes (verified user)	            No
+/posts	        POST	      Create a new post	          Yes (verified user)	            Admin only
+/posts/:id	    DELETE	    Delete a post	              Yes (verified user)	            Admin only
+
+
+
+
 Prerequisites
 Before running the project, ensure you have the following installed:
 
