@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://your-frontend-domain.com'], 
+  origin: '*', 
   methods: ['GET', 'POST', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
 }));
