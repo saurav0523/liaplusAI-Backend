@@ -6,4 +6,5 @@ export interface Post {
   content: string;
   author_id: any;
   created_at: Date;
+  updatedAt?: Date;
 }

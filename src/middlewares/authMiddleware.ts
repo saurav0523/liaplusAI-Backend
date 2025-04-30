@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt, { VerifyErrors } from 'jsonwebtoken';
 
-// Define the shape of req.user
 interface UserPayload {
   id: string;
   role: string;
@@ -17,6 +16,7 @@ declare global {
 }
 
 export const authenticateToken = (req: Request, res: Response, next: NextFunction): void => {
+  const authHeader = req.headers['authorization'];
   const token = req.headers['authorization']?.split(' ')[1];
   if (!token) {
     res.status(401).json({ message: 'Access denied' });
