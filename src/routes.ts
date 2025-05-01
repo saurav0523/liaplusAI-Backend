@@ -12,5 +12,5 @@ router.post('/auth/login', login);
 router.get('/posts', authenticateToken, requireVerification, getPosts);
 router.post('/posts', authenticateToken, restrictToAdmin, requireVerification, createPost);
 router.delete('/posts/:id', authenticateToken, restrictToAdmin, requireVerification, deletePost);
-router.put('/posts/:id', authenticateToken, restrictToAdmin, requireVerification, updatePost)
+router.patch('/posts/:id', authenticateToken, restrictToAdmin, requireVerification, updatePost)
 export default router;
