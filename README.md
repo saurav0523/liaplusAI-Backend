@@ -18,24 +18,24 @@ The project follows a modular structure for better organization and scalability:
 
 project/
 ├── src/
-│   ├── controllers/               # Logic for handling API requests
-│   │   ├── authController.ts      # Handles authentication (signup, login, email verification)
-│   │   └── postController.ts      # Handles blog post operations (create, read, delete)
-│   ├── middlewares/               # Middleware for authentication and authorization
-│   │   └── authMiddleware.ts      # Middleware for JWT, role-based access, and email verification
-│   ├── database/                  # Database connection setup
-│   │   └── db.ts                 # MongoDB connection configuration
-│   ├── models/                    # TypeScript interfaces for data models
-│   │   ├── user.model.ts         # User model (name, email, role, etc.)
-│   │   └── post.model.ts         # Post model (title, content, author_id, etc.)
-│   ├── services/                  # External service integrations
-│   │   └── emailService.ts       # Email sending logic for verification
-│   ├── routes.ts                 # API route definitions
-│   └── server.ts                 # Entry point of the application
-├── .env                          # Environment variables (e.g., DATABASE_URL, JWT_SECRET)
-├── tsconfig.json                 # TypeScript configuration
-├── package.json                  # Project metadata and dependencies
-└── README.md                     # Project documentation (this file)
+│   ├── controllers/              
+│   │   ├── authController.ts     
+│   │   └── postController.ts     
+│   ├── middlewares/               
+│   │   └── authMiddleware.ts      
+│   ├── database/               
+│   │   └── db.ts               
+│   ├── models/                   
+│   │   ├── user.model.ts        
+│   │   └── post.model.ts       
+│   ├── services/                
+│   │   └── emailService.ts      
+│   ├── routes.ts                
+│   └── server.ts               
+├── .env                         
+├── tsconfig.json                 
+├── package.json                  
+└── README.md                    
 
 
 ## Technologies Used
@@ -60,14 +60,16 @@ This project is built using the following technologies and libraries, with their
 
 ## Summary of Endpoints Tested
 
-| Endpoint        | Method | Description             | Authorization Required   | Role Restriction  |
-|-----------------|--------|-------------------------|--------------------------|-------------------|
-| `/auth/signup`  | POST   | Register a new user     | No                       | No                |
-| `/auth/verify`  | GET    | Verify user email       | No                       | No                |
-| `/auth/login`   | POST   | Log in and get JWT token| No                       | No                |
-| `/posts`        | GET    | View all posts          | Yes (verified user)      | No                |
-| `/posts`        | POST   | Create a new post       | Yes (verified user)      | Admin only        |
-| `/posts/:id`    | DELETE | Delete a post           | Yes (verified user)      | Admin only        |
+| Endpoint         | Method | Description        | Authorization | Role Restriction |
+|------------------|--------|--------------------|---------------|------------------|
+| `/auth/signup`   | POST   | Register user      | No            | No               |
+| `/auth/verify`   | GET    | Verify email       | No            | No               |
+| `/auth/login`    | POST   | Get ***JWT***      | No            | No               |
+| `/posts`         | GET    | View posts         | Yes           | No               |
+| `/posts`         | POST   | Create post        | Yes           | Admin only       |
+| `/posts/:id`     | PATCH  | Update post        | Yes           | Admin only       |
+| `/posts/:id`     | DELETE | Delete post        | Yes           | Admin only       |
+
 
 ## Live Deployment
 
